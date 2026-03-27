@@ -9,4 +9,24 @@
 	--color-meadow: #7cb342;
 	--color-meadow-light: #9ccc65;
 	--color-cream: #f5f2eb;
+	--color-lavender: #E8E1EF;
+	--color-ice: #D9FFF8;
+	--color-mint: #C7FFDA;
+	--color-sage: #C4F4C7;
+	--color-moss: #9BB291;
+}
+
+:root {
+	--color-primary: oklch(91.93% 0.0202 308.060);
+	--color-primary-content: oklch(39.09% 0.0949 135.270);
+	--color-secondary: oklch(92.19% 0.0781 146.606);
+	--color-secondary-content: oklch(39.09% 0.0949 135.270);
+	--color-accent: oklch(70.49% 0.1552 131.404);
+	--color-accent-content: oklch(96.15% 0.0098 87.511);
+	--color-neutral: oklch(39.09% 0.0949 135.270);
+	--color-neutral-content: oklch(96.15% 0.0098 87.511);
+	--color-base-100: oklch(96.15% 0.0098 87.511);
+	--color-base-200: oklch(93% 0.0098 87.511);
+	--color-base-300: oklch(89% 0.0098 87.511);
+	--color-base-content: oklch(39.09% 0.0949 135.270);
 }

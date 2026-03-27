@@ -1,36 +1,33 @@
 import { For } from "solid-js";
 
 const falseFriends = [
-	{
-		word: "bok",
-		nl: "Geit",
-		sv: "Boek",
-	},
-	{
-		word: "rolig",
-		nl: "Rustig / kalm",
-		sv: "Grappig / leuk",
-	},
-	{
-		word: "semester",
-		nl: "Schoolperiode",
-		sv: "Vakantie",
-	},
-	{
-		word: "glass",
-		nl: "Glas",
-		sv: "IJsje",
-	},
-	{
-		word: "rar",
-		nl: "Raar / vreemd",
-		sv: "Grappig",
-	},
-	{
-		word: "gift",
-		nl: "Cadeau (of gif)",
-		sv: "Getrouwd / gif",
-	},
+	{ word: "bil", nl: "Bil", sv: "Auto" },
+	{ word: "bord", nl: "Bord", sv: "Tafel" },
+	{ word: "dike", nl: "Dijk", sv: "Sloot of greppel" },
+	{ word: "gift", nl: "Cadeau (of gif)", sv: "Getrouwd / gif" },
+	{ word: "glass", nl: "Glas", sv: "IJsje" },
+	{ word: "god", nl: "God", sv: "Goed" },
+	{ word: "golv", nl: "Golf", sv: "Vloer" },
+	{ word: "hav", nl: "Haven", sv: "Zee" },
+	{ word: "orm", nl: "Worm", sv: "Slang" },
+	{ word: "snor", nl: "Snor", sv: "Snottebel" },
+	{ word: "snäll", nl: "Snel", sv: "Aardig, lief" },
+	
+	{ word: "kind", nl: "Kind", sv: "Wang" },
+	{ word: "ful", nl: "Vuil", sv: "Lelijk" },
+
+	{ word: "middag", nl: "Middag", sv: "Avondmaaltijd / diner" },
+	{ word: "puss", nl: "Poes", sv: "Kus" },
+	{ word: "stor", nl: "Stoer", sv: "Groot" },
+	{ word: "tegel", nl: "Tegel", sv: "Baksteen" },
+	{ word: "trött", nl: "Trut", sv: "Moe" },
+
+
+	{ word: "handfat", nl: "Handvat", sv: "Wastafel" },
+	{ word: "kvast", nl: "Kwast", sv: "Takje, twijgbezem" },
+	{ word: "svimma", nl: "Zwemmen", sv: "Flauwvallen" },
+	{ word: "vrede", nl: "Vrede", sv: "Woede, boosheid" },
+	{ word: "våning", nl: "Woning", sv: "Verdieping / appartement" },
 ];
 
 export default function FalsefriendsSection() {
