@@ -17,9 +17,9 @@ export default function Home() {
 			<QASection />
 			<AISection />
 			<FAQSection />
-			<MapSection />
 			<CoursesSection />
 			<ContactSection />
+			<MapSection />
 		</>
 	);
 }

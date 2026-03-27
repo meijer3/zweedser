@@ -9,7 +9,7 @@ function App() {
 	return (
 		<Router
 			root={(props) => (
-				<div class="min-h-screen flex flex-col">
+				<div class="min-h-screen flex flex-col overflow-x-hidden">
 					<Navbar />
 					<main class="flex-1">{props.children}</main>
 					<Footer />
