@@ -1,6 +1,6 @@
 import { For, createSignal } from "solid-js";
 import type { Component } from "solid-js";
-import { memoryPairs, NlFlag, SvFlag } from "./memoryIcons";
+import { memoryPairs } from "./memoryIcons";
 
 type IconComponent = Component<Record<string, unknown>>;
 
@@ -105,16 +105,16 @@ export default function MemoryGame() {
 	return (
 		<section class="w-full bg-cream">
 			<div class="max-w-[800px] mx-auto px-4 py-16">
-				<h2 class="text-3xl font-bold text-forest mb-2">Memory Spel</h2>
+				<h2 class="text-3xl font-bold text-forest mb-2">Valse Vrienden</h2>
 				<p class="text-base-content/60 mb-6">
-					Vind de paren! Koppel de Nederlandse en Zweedse betekenis van
-					hetzelfde woord.
+					Nederlands en Zweeds delen dezelfde Germaanse roots en hebben
+					zo'n 80% woordoverlap — dat maakt Zweeds een van de makkelijkste
+					talen om te leren als Nederlandstalige. Maar pas op: sommige
+					woorden lijken hetzelfde, maar betekenen iets heel anders.
+					Vind de Zweeds-Nederlandse paren!
 				</p>
 
 				<div class="flex items-center gap-4 mb-6">
-					<span class="text-sm text-base-content/60">
-						Zetten: {moves()}
-					</span>
 					{allMatched() && (
 						<span class="text-sm font-bold text-meadow">
 							Gefeliciteerd! Alle paren gevonden!
@@ -129,7 +129,7 @@ export default function MemoryGame() {
 					</button>
 				</div>
 
-				<div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+				<div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
 					<For each={cards()}>
 						{(card) => {
 							const isFlipped = () =>
@@ -137,12 +137,14 @@ export default function MemoryGame() {
 							const isMatched = () => matched().has(card.id);
 							const isWrong = () => wrong().has(card.id);
 							const Icon = card.icon;
-							const Flag = card.lang === "nl" ? NlFlag : SvFlag;
+							const nlColors = { bg: "#AE1C28", stripe: "#FFF", bottom: "#21468B" };
+							const svColors = { bg: "#006AA7", stripe: "#FECC00" };
+							const isNl = card.lang === "nl";
 
 							return (
 								<button
 									type="button"
-									class="aspect-square cursor-pointer perspective-500 w-full"
+									class="aspect-4/3 cursor-pointer perspective-500 w-full"
 									onClick={() => handleClick(card)}
 								>
 									<div
@@ -155,25 +157,45 @@ export default function MemoryGame() {
 										}}
 									>
 										{/* Front: shows the icon */}
-										<div class="absolute inset-0 rounded-xl flex items-center justify-center backface-hidden border-2 bg-white border-forest/30">
-											<Icon class="w-12 h-12 sm:w-16 sm:h-16" />
+										<div class="absolute inset-0 rounded-lg flex items-center justify-center backface-hidden border-2 bg-white border-forest/30">
+											<Icon class="w-10 h-10 sm:w-12 sm:h-12" />
 										</div>
 
-										{/* Back: shows the word + flag */}
+										{/* Back: fullscreen flag with white text box */}
 										<div
-											class="absolute inset-0 rounded-xl flex flex-col items-center justify-center gap-2 backface-hidden border-2 transition-colors duration-200"
+											class="absolute inset-0 rounded-lg overflow-hidden backface-hidden border-2 transition-colors duration-200"
 											style={{ transform: "rotateY(180deg)" }}
 											classList={{
-												"bg-meadow/20 border-meadow": isMatched(),
-												"bg-red-100 border-red-400": isWrong(),
-												"bg-white border-forest/30":
+												"border-meadow": isMatched(),
+												"border-red-400": isWrong(),
+												"border-forest/30":
 													!isMatched() && !isWrong(),
 											}}
 										>
-											<Flag class="w-10 h-7 rounded-sm opacity-60" />
-											<span class="text-lg sm:text-xl font-bold text-forest">
-												{card.word}
-											</span>
+											{/* Flag background */}
+											{isNl ? (
+												<div class="absolute inset-0" style={{ filter: "saturate(0.3) brightness(1.2)" }}>
+													<div class="h-1/3 w-full" style={{ background: nlColors.bg }} />
+													<div class="h-1/3 w-full" style={{ background: nlColors.stripe }} />
+													<div class="h-1/3 w-full" style={{ background: nlColors.bottom }} />
+												</div>
+											) : (
+												<div class="absolute inset-0" style={{ filter: "saturate(0.3) brightness(1.2)", background: svColors.bg }}>
+													<div class="absolute top-[40%] left-0 w-full h-[20%]" style={{ background: svColors.stripe }} />
+													<div class="absolute top-0 left-[28%] w-[16%] h-full" style={{ background: svColors.stripe }} />
+												</div>
+											)}
+											{/* White text box centered */}
+											<div class="absolute inset-0 flex items-center justify-center">
+												<span
+													class="bg-white/90 px-2 py-1 rounded text-sm sm:text-base font-bold text-forest shadow-sm"
+													classList={{
+														"ring-2 ring-meadow": isMatched(),
+													}}
+												>
+													{card.word}
+												</span>
+											</div>
 										</div>
 									</div>
 								</button>

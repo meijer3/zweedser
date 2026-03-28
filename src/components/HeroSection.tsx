@@ -5,10 +5,12 @@ export default function HeroSection() {
 			style={{ "background-image": "url('/images/20221030111534.jpg')" }}
 		>
 			<div class="absolute inset-0 bg-lavender/60" />
-			<div class="relative max-w-[800px] mx-auto px-4 py-24 text-white text-center">
+			<div class="relative max-w-[800px] mx-auto px-4 py-24 text-black text-center">
 				<h1 class="text-4xl md:text-6xl font-bold mb-4">Zweedser</h1>
-				<p class="text-lg md:text-xl text-white/80 mb-8">
-					Leer Zweeds vanuit het hart van Skåne
+				<p class="text-lg md:text-xl text-black/80 mb-8">
+					Taal en cultuur gaan hand in hand
+					<br />
+					Kom bij ons online volgen met op maat les
 				</p>
 				<a
 					href="#cursussen"

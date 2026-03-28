@@ -1,1 +1,10 @@
-{}
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/OneDrive/4_Documents/7_Obsidian/Buy things/**)"
+    ],
+    "additionalDirectories": [
+      "D:\\OneDrive\\4_Documents\\7_Obsidian\\Buy things"
+    ]
+  }
+}

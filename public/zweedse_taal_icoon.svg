@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520">
+  <!-- Icon background — Swedish blue -->
+  <rect x="140" y="20" width="400" height="400" rx="88" fill="#005A8E"/>
+
+  <!-- Decorative folk-art dot pattern — bottom zone -->
+  <circle cx="255" cy="368" r="6" fill="#FFCC00" opacity="0.9"/>
+  <circle cx="340" cy="368" r="6" fill="#FFCC00" opacity="0.9"/>
+  <circle cx="425" cy="368" r="6" fill="#FFCC00" opacity="0.9"/>
+  <circle cx="212" cy="393" r="5" fill="#FFCC00" opacity="0.55"/>
+  <circle cx="297" cy="393" r="5" fill="#FFCC00" opacity="0.55"/>
+  <circle cx="382" cy="393" r="5" fill="#FFCC00" opacity="0.55"/>
+  <circle cx="467" cy="393" r="5" fill="#FFCC00" opacity="0.55"/>
+  <circle cx="255" cy="415" r="4" fill="#FFCC00" opacity="0.3"/>
+  <circle cx="340" cy="415" r="4" fill="#FFCC00" opacity="0.3"/>
+  <circle cx="425" cy="415" r="4" fill="#FFCC00" opacity="0.3"/>
+
+  <!-- Small corner accents inside icon -->
+  <circle cx="182" cy="62" r="9" fill="#FFCC00" opacity="0.25"/>
+  <circle cx="498" cy="62" r="9" fill="#FFCC00" opacity="0.25"/>
+
+  <!-- Speech bubble body — Swedish yellow -->
+  <rect x="170" y="52" width="340" height="240" rx="52" fill="#FFCC00"/>
+
+  <!-- Speech bubble tail -->
+  <path d="M 208 290 Q 185 290 168 352 Q 182 318 260 292 Z" fill="#FFCC00"/>
+
+  <!-- Small inner decorative circles inside bubble -->
+  <circle cx="202" cy="100" r="9" fill="#005A8E" opacity="0.12"/>
+  <circle cx="478" cy="100" r="9" fill="#005A8E" opacity="0.12"/>
+  <circle cx="202" cy="272" r="7" fill="#005A8E" opacity="0.1"/>
+  <circle cx="478" cy="272" r="7" fill="#005A8E" opacity="0.1"/>
+
+  <!-- "Hej!" text inside bubble -->
+  <text x="340" y="200" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="78" font-weight="500" fill="#005A8E">Hej!</text>
+
+  <!-- Label below icon -->
+  <text x="340" y="452" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="400" fill="currentColor">Zweeds taalicoon — speels &amp; kleurrijk</text>
+</svg>

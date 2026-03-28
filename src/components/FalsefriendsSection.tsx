@@ -36,7 +36,11 @@ export default function FalsefriendsSection() {
 			<div class="max-w-[800px] mx-auto px-4 py-16">
 				<h2 class="text-3xl font-bold text-forest mb-2">Valse Vrienden</h2>
 				<p class="text-base-content/60 mb-8">
-					Woorden die hetzelfde lijken, maar iets heel anders betekenen.
+					Nederlands en Zweeds delen dezelfde Germaanse roots en hebben
+					zo'n 80% woordoverlap — dat maakt Zweeds een van de makkelijkste
+					talen om te leren als Nederlandstalige. Maar pas op: sommige
+					woorden lijken hetzelfde, maar betekenen iets heel anders. Dit
+					zijn de bekendste valkuilen.
 				</p>
 				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 					<For each={falseFriends}>

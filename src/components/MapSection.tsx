@@ -1,7 +1,7 @@
 import { createSignal } from "solid-js";
 
 export default function MapSection() {
-	const [showOverlay, setShowOverlay] = createSignal(true);
+	const [active, setActive] = createSignal(false);
 
 	return (
 		<section class="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden bg-white">
@@ -14,26 +14,21 @@ export default function MapSection() {
 			</div>
 			<div
 				class="relative"
-				onMouseLeave={() => setShowOverlay(true)}
+				onMouseLeave={() => setActive(false)}
 			>
-				{showOverlay() && (
-					<div
-						class="absolute inset-0 z-10 flex items-center justify-center cursor-default"
-						onWheel={(e) => {
-							if (e.ctrlKey) {
-								setShowOverlay(false);
-							}
-						}}
-					>
-						<span class="bg-black/50 text-white text-sm px-3 py-1.5 rounded-full pointer-events-none opacity-0 transition-opacity group-hover:opacity-100">
-							Ctrl + scroll om te zoomen
-						</span>
-					</div>
-				)}
+				<div
+					class="absolute inset-0 z-10 touch-none"
+					classList={{ "pointer-events-none": active() }}
+					onWheel={(e) => {
+						if (e.ctrlKey) {
+							setActive(true);
+						}
+					}}
+				/>
 				<iframe
 					title="Kaart van Zweden"
-					src="https://www.openstreetmap.org/export/embed.html?bbox=8.0,55.0,25.0,69.5&layer=mapnik&marker=55.9333,13.5417"
-					class="w-full h-80 md:h-112.5 border-0"
+					src="https://www.openstreetmap.org/export/embed.html?bbox=10.0,55.0,21.0,64.0&layer=mapnik&marker=55.9333,13.5417"
+					class="w-full h-80 md:h-112.5 border-0 pointer-events-none md:pointer-events-auto"
 					loading="lazy"
 				/>
 			</div>
