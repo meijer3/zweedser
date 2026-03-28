@@ -1,7 +1,7 @@
 export default function ContactSection() {
 	return (
 		<section class="w-full bg-cream">
-			<div class="max-w-[800px] mx-auto px-4 py-16">
+			<div class="max-w-[840px] mx-auto px-6 md:px-8 py-[6vw]">
 				<h2 class="text-3xl font-bold text-forest mb-2">Contact</h2>
 				<p class="text-base-content/60 mb-8">
 					Vragen over onze cursussen? Neem gerust contact op.

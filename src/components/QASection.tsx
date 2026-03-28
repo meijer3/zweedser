@@ -31,7 +31,8 @@ const topics = [
 	},
 	{
 		title: "Eten & drinken",
-		description: "Van surströmming tot kanelbullar — Zweedse culinaire cultuur.",
+		description:
+			"Van surströmming tot kanelbullar — Zweedse culinaire cultuur.",
 	},
 	{
 		title: "Gezondheidszorg",
@@ -51,10 +52,7 @@ const topics = [
 	},
 ];
 
-function pickRandom(
-	count: number,
-	exclude: typeof topics = [],
-): typeof topics {
+function pickRandom(count: number, exclude: typeof topics = []): typeof topics {
 	const available = topics.filter(
 		(t) => !exclude.some((e) => e.title === t.title),
 	);
@@ -68,10 +66,11 @@ function pickRandom(
 
 function createCard(title: string, description: string): HTMLDivElement {
 	const card = document.createElement("div");
-	card.className = "topic-card card bg-white shadow-sm absolute inset-0";
+	card.className =
+		"topic-card card bg-white rounded-3xl border border-forest/5 absolute inset-0";
 
 	const body = document.createElement("div");
-	body.className = "card-body p-4";
+	body.className = "card-body p-6";
 
 	const h3 = document.createElement("h3");
 	h3.className = "font-bold text-forest";
@@ -142,21 +141,21 @@ export default function QASection() {
 			}, delay);
 		}
 
-		setTimeout(() => {
-			setCurrent(next);
-			animating = false;
-		}, 3 * 80 + duration + 20);
+		setTimeout(
+			() => {
+				setCurrent(next);
+				animating = false;
+			},
+			3 * 80 + duration + 20,
+		);
 	}
 
 	return (
-		<section class="w-full bg-meadow/10">
-			<div class="max-w-[800px] mx-auto px-4 py-16">
-				<h2 class="text-3xl font-bold text-forest mb-2">
-					Gespreksonderwerpen
-				</h2>
+		<section class="w-full bg-warm-white">
+			<div class="max-w-[840px] mx-auto px-6 md:px-8 py-[6vw]">
+				<h2 class="text-3xl font-bold text-forest mb-2">Gespreksonderwerpen</h2>
 				<p class="text-base-content/60 mb-8">
-					Breng zelf een onderwerp mee en oefen Zweeds over wat jou
-					bezighoudt.
+					Breng zelf een onderwerp mee en oefen Zweeds over wat jou bezighoudt.
 				</p>
 				<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
 					<For each={current()}>
@@ -167,11 +166,9 @@ export default function QASection() {
 								}}
 								class="relative overflow-hidden min-h-30"
 							>
-								<div class="topic-card card bg-white shadow-sm absolute inset-0">
-									<div class="card-body p-4">
-										<h3 class="font-bold text-forest">
-											{topic.title}
-										</h3>
+								<div class="topic-card card bg-white rounded-3xl border border-forest/5 absolute inset-0">
+									<div class="card-body p-6">
+										<h3 class="font-bold text-forest">{topic.title}</h3>
 										<p class="text-sm text-base-content/70">
 											{topic.description}
 										</p>

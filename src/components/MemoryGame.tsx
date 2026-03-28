@@ -85,7 +85,7 @@ export default function MemoryGame() {
 			} else {
 				setWrong(new Set([first.id, second.id]));
 				setTimeout(() => {
-					setWrong(new Set());
+					setWrong(new Set<number>());
 					setFlipped([]);
 					setLocked(false);
 				}, 800);
@@ -96,22 +96,22 @@ export default function MemoryGame() {
 	function newRound() {
 		setCards(buildDeck());
 		setFlipped([]);
-		setMatched(new Set());
-		setWrong(new Set());
+		setMatched(new Set<number>());
+		setWrong(new Set<number>());
 		setLocked(false);
 		setMoves(0);
 	}
 
 	return (
 		<section class="w-full bg-cream">
-			<div class="max-w-[800px] mx-auto px-4 py-16">
+			<div class="max-w-[840px] mx-auto px-6 md:px-8 py-[6vw]">
 				<h2 class="text-3xl font-bold text-forest mb-2">Valse Vrienden</h2>
 				<p class="text-base-content/60 mb-6">
-					Nederlands en Zweeds delen dezelfde Germaanse roots en hebben
-					zo'n 80% woordoverlap — dat maakt Zweeds een van de makkelijkste
-					talen om te leren als Nederlandstalige. Maar pas op: sommige
-					woorden lijken hetzelfde, maar betekenen iets heel anders.
-					Vind de Zweeds-Nederlandse paren!
+					Nederlands en Zweeds delen dezelfde Germaanse roots en hebben zo'n 80%
+					woordoverlap — dat maakt Zweeds een van de makkelijkste talen om te
+					leren als Nederlandstalige. Maar pas op: sommige woorden lijken
+					hetzelfde, maar betekenen iets heel anders. Vind de Zweeds-Nederlandse
+					paren!
 				</p>
 
 				<div class="flex items-center gap-4 mb-6">
@@ -137,7 +137,11 @@ export default function MemoryGame() {
 							const isMatched = () => matched().has(card.id);
 							const isWrong = () => wrong().has(card.id);
 							const Icon = card.icon;
-							const nlColors = { bg: "#AE1C28", stripe: "#FFF", bottom: "#21468B" };
+							const nlColors = {
+								bg: "#AE1C28",
+								stripe: "#FFF",
+								bottom: "#21468B",
+							};
 							const svColors = { bg: "#006AA7", stripe: "#FECC00" };
 							const isNl = card.lang === "nl";
 
@@ -168,21 +172,44 @@ export default function MemoryGame() {
 											classList={{
 												"border-meadow": isMatched(),
 												"border-red-400": isWrong(),
-												"border-forest/30":
-													!isMatched() && !isWrong(),
+												"border-forest/30": !isMatched() && !isWrong(),
 											}}
 										>
 											{/* Flag background */}
 											{isNl ? (
-												<div class="absolute inset-0" style={{ filter: "saturate(0.3) brightness(1.2)" }}>
-													<div class="h-1/3 w-full" style={{ background: nlColors.bg }} />
-													<div class="h-1/3 w-full" style={{ background: nlColors.stripe }} />
-													<div class="h-1/3 w-full" style={{ background: nlColors.bottom }} />
+												<div
+													class="absolute inset-0"
+													style={{ filter: "saturate(0.3) brightness(1.2)" }}
+												>
+													<div
+														class="h-1/3 w-full"
+														style={{ background: nlColors.bg }}
+													/>
+													<div
+														class="h-1/3 w-full"
+														style={{ background: nlColors.stripe }}
+													/>
+													<div
+														class="h-1/3 w-full"
+														style={{ background: nlColors.bottom }}
+													/>
 												</div>
 											) : (
-												<div class="absolute inset-0" style={{ filter: "saturate(0.3) brightness(1.2)", background: svColors.bg }}>
-													<div class="absolute top-[40%] left-0 w-full h-[20%]" style={{ background: svColors.stripe }} />
-													<div class="absolute top-0 left-[28%] w-[16%] h-full" style={{ background: svColors.stripe }} />
+												<div
+													class="absolute inset-0"
+													style={{
+														filter: "saturate(0.3) brightness(1.2)",
+														background: svColors.bg,
+													}}
+												>
+													<div
+														class="absolute top-[40%] left-0 w-full h-[20%]"
+														style={{ background: svColors.stripe }}
+													/>
+													<div
+														class="absolute top-0 left-[28%] w-[16%] h-full"
+														style={{ background: svColors.stripe }}
+													/>
 												</div>
 											)}
 											{/* White text box centered */}

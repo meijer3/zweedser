@@ -29,22 +29,28 @@ const faqs = [
 		q: "In welke taal wordt er lesgegeven?",
 		a: "De lessen zijn in het Nederlands, met steeds meer Zweeds naarmate je vordert.",
 	},
+	{
+		q: "Waarom vervangt AI geen docent?",
+		a: "Een taal leren draait om meer dan woorden en grammatica. Het gaat om persoonlijk contact, nuance, en de cultuur achter de taal. Dat kan geen AI je bieden. Bij ons krijg je een echte docent die je kent, corrigeert en motiveert.",
+	},
+	{
+		q: "Hoe zetten jullie AI in?",
+		a: "AI is een geweldig hulpmiddel om leuke en interactieve oefeningen te maken. Denk aan woordspelletjes, quizzen en oefenmateriaal op maat. Zo combineren we het beste van twee werelden: technologie én persoonlijke begeleiding.",
+	},
 ];
 
 export default function FAQSection() {
 	return (
-		<section class="w-full bg-white">
-			<div class="max-w-[800px] mx-auto px-4 py-16">
-				<h2 class="text-3xl font-bold text-forest mb-2">
-					Veelgestelde vragen
-				</h2>
+		<section class="w-full bg-cream">
+			<div class="max-w-[840px] mx-auto px-6 md:px-8 py-[6vw]">
+				<h2 class="text-3xl font-bold text-forest mb-2">Veelgestelde vragen</h2>
 				<p class="text-base-content/60 mb-8">
 					Antwoorden op de meest gestelde vragen over onze cursussen.
 				</p>
-				<div class="space-y-2">
+				<div class="space-y-3">
 					<For each={faqs}>
 						{(faq) => (
-							<div class="collapse collapse-arrow bg-cream">
+							<div class="collapse collapse-arrow bg-cream rounded-2xl overflow-hidden">
 								<input type="radio" name="faq-accordion" />
 								<div class="collapse-title font-semibold text-forest">
 									{faq.q}

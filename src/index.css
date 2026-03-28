@@ -8,25 +8,39 @@
 	--color-forest-light: #3a6b1e;
 	--color-meadow: #7cb342;
 	--color-meadow-light: #9ccc65;
-	--color-cream: #f5f2eb;
-	--color-lavender: #E8E1EF;
-	--color-ice: #D9FFF8;
-	--color-mint: #C7FFDA;
-	--color-sage: #C4F4C7;
-	--color-moss: #9BB291;
+	--color-cream: #f0ebe0;
+	--color-warm-white: #faf8f3;
+	--color-sand: #ede8df;
+	--color-lavender: #e8e1ef;
+	--color-ice: #d9fff8;
+	--color-mint: #c7ffda;
+	--color-sage: #d4e4cb;
+	--color-moss: #9bb291;
+
+	--font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-display: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-display);
 }
 
 :root {
-	--color-primary: oklch(91.93% 0.0202 308.060);
-	--color-primary-content: oklch(39.09% 0.0949 135.270);
+	--color-primary: oklch(91.93% 0.0202 308.06);
+	--color-primary-content: oklch(39.09% 0.0949 135.27);
 	--color-secondary: oklch(92.19% 0.0781 146.606);
-	--color-secondary-content: oklch(39.09% 0.0949 135.270);
+	--color-secondary-content: oklch(39.09% 0.0949 135.27);
 	--color-accent: oklch(70.49% 0.1552 131.404);
 	--color-accent-content: oklch(96.15% 0.0098 87.511);
-	--color-neutral: oklch(39.09% 0.0949 135.270);
+	--color-neutral: oklch(39.09% 0.0949 135.27);
 	--color-neutral-content: oklch(96.15% 0.0098 87.511);
-	--color-base-100: oklch(96.15% 0.0098 87.511);
-	--color-base-200: oklch(93% 0.0098 87.511);
-	--color-base-300: oklch(89% 0.0098 87.511);
-	--color-base-content: oklch(39.09% 0.0949 135.270);
+	--color-base-100: oklch(97.5% 0.008 80);
+	--color-base-200: oklch(94.5% 0.01 80);
+	--color-base-300: oklch(90.5% 0.01 80);
+	--color-base-content: oklch(39.09% 0.0949 135.27);
 }

@@ -1,3 +1,4 @@
+import { FiCheck, FiX } from "solid-icons/fi";
 import { For } from "solid-js";
 
 const mistakes = [
@@ -54,31 +55,27 @@ const mistakes = [
 
 export default function CommonMistakesSection() {
 	return (
-		<section class="w-full">
-			<div class="max-w-[800px] mx-auto px-4 py-16">
-				<h2 class="text-3xl font-bold text-forest mb-2">
-					Veelgemaakte fouten
-				</h2>
+		<section class="w-full bg-sage">
+			<div class="max-w-[840px] mx-auto px-6 md:px-8 py-[6vw]">
+				<h2 class="text-3xl font-bold text-forest mb-2">Veelgemaakte fouten</h2>
 				<p class="text-base-content/60 mb-8">
-					Als Nederlandstalige heb je een enorme voorsprong bij het leren
-					van Zweeds. Maar juist die gelijkenis zorgt voor typische
-					valkuilen. Herken je deze fouten?
+					Als Nederlandstalige heb je een enorme voorsprong bij het leren van
+					Zweeds. Maar juist die gelijkenis zorgt voor typische valkuilen.
+					Herken je deze fouten?
 				</p>
-				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
 					<For each={mistakes}>
 						{(item) => (
-							<div class="card bg-white shadow-sm">
-								<div class="card-body p-4">
+							<div class="card bg-white rounded-3xl border border-forest/5">
+								<div class="card-body p-6">
 									<div class="flex items-start justify-between gap-2">
 										<div class="space-y-1 flex-1">
 											<div class="flex items-center gap-2 text-forest/40 line-through">
-												<span class="text-lg">✗</span>
-												<span class="font-mono text-sm">
-													{item.wrong}
-												</span>
+												<FiX size={18} />
+												<span class="font-mono text-sm">{item.wrong}</span>
 											</div>
 											<div class="flex items-center gap-2 text-forest">
-												<span class="text-lg">✓</span>
+												<FiCheck size={18} />
 												<span class="font-mono text-sm font-semibold">
 													{item.right}
 												</span>

@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Read(//d/OneDrive/4_Documents/7_Obsidian/Buy things/**)"
+      "Read(//d/OneDrive/4_Documents/7_Obsidian/Buy things/**)",
+      "Bash(npx tsc:*)",
+      "Bash(npm install:*)",
+      "Bash(grep -i \"home\\\\|house\\\\|briefcase\\\\|heart\\\\|graduation\\\\|message\\\\|check\\\\|close\\\\|x$\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\(''''exports'''',{}\\).get\\(''''./fi'''',{}\\), indent=2\\)\\)\")"
     ],
     "additionalDirectories": [
       "D:\\OneDrive\\4_Documents\\7_Obsidian\\Buy things"
