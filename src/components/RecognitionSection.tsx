@@ -6,33 +6,34 @@ import {
 	FiHome,
 	FiMessageCircle,
 } from "solid-icons/fi";
+import type { JSX } from "solid-js";
 import { For } from "solid-js";
 import { Dynamic } from "solid-js/web";
 
-const herkenningen: { icon: IconTypes | string; text: string }[] = [
+const herkenningen: { icon: IconTypes | string; text: JSX.Element }[] = [
+	{
+		icon: "🇸🇪",
+		text: <>Je <b class="font-semibold text-forest">droomt</b> van een leven in Zweden en wilt alvast de taal leren</>,
+	},
 	{
 		icon: FiHome,
-		text: "Je bent verhuisd naar Zweden en wilt je buren eindelijk echt verstaan",
-	},
-	{
-		icon: FiBriefcase,
-		text: "Je werkt in een Zweeds team en merkt dat Engels alleen niet meer genoeg is",
-	},
-	{
-		icon: FiHeart,
-		text: "Je partner is Zweeds en je wilt de familie niet meer in het Engels toespreken",
+		text: <>Je gaat emigreren en wilt een <b class="font-semibold text-forest">vliegende start</b> met de taal</>,
 	},
 	{
 		icon: FiBookOpen,
-		text: "Je volgt SFI maar mist uitleg in je eigen taal",
+		text: <>Je volgt SFI maar mist uitleg in je <b class="font-semibold text-forest">eigen taal</b></>,
 	},
 	{
-		icon: "🇸🇪",
-		text: "Je droomt van een leven in Zweden en wilt alvast de taal leren",
+		icon: FiBriefcase,
+		text: <>Je werkt in een Zweeds team en merkt dat Engels alleen <b class="font-semibold text-forest">niet meer genoeg</b> is</>,
+	},
+	{
+		icon: FiHeart,
+		text: <>Je partner is Zweeds en je wilt de <b class="font-semibold text-forest">familie</b> niet meer in het Engels toespreken</>,
 	},
 	{
 		icon: FiMessageCircle,
-		text: "Je spreekt al wat Zweeds maar wilt het echt goed doen",
+		text: <>Je spreekt al wat Zweeds maar wilt <b class="font-semibold text-forest">niet meer opvallen</b></>,
 	},
 ];
 

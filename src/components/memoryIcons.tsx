@@ -611,15 +611,15 @@ export function AngerIcon(props: IconProps) {
 }
 
 export const memoryPairs = [
-	{ word: "bil", nlIcon: ButtIcon, svIcon: CarIcon },
-	{ word: "bord", nlIcon: PlateIcon, svIcon: TableIcon },
-	{ word: "dike", nlIcon: DykeIcon, svIcon: DitchIcon },
-	{ word: "glass", nlIcon: GlassIcon, svIcon: IceCreamIcon },
-	{ word: "orm", nlIcon: WormIcon, svIcon: SnakeIcon },
-	{ word: "snor", nlIcon: MoustacheIcon, svIcon: SnotIcon },
-	{ word: "god", nlIcon: DeityIcon, svIcon: ThumbsUpIcon },
-	{ word: "rock", nlIcon: SkirtIcon, svIcon: CoatIcon },
-	{ word: "stor", nlIcon: ToughIcon, svIcon: BigIcon },
-	{ word: "puss", nlIcon: CatIcon, svIcon: KissIcon },
-	{ word: "vrede", nlIcon: PeaceIcon, svIcon: AngerIcon },
+	{ nlWord: "bil", svWord: "bil", nlIcon: ButtIcon, svIcon: CarIcon },
+	{ nlWord: "bord", svWord: "bord", nlIcon: PlateIcon, svIcon: TableIcon },
+	{ nlWord: "dijk", svWord: "dike", nlIcon: DykeIcon, svIcon: DitchIcon },
+	{ nlWord: "glas", svWord: "glass", nlIcon: GlassIcon, svIcon: IceCreamIcon },
+	{ nlWord: "worm", svWord: "orm", nlIcon: WormIcon, svIcon: SnakeIcon },
+	{ nlWord: "snor", svWord: "snor", nlIcon: MoustacheIcon, svIcon: SnotIcon },
+	{ nlWord: "god", svWord: "god", nlIcon: DeityIcon, svIcon: ThumbsUpIcon },
+	{ nlWord: "rok", svWord: "rock", nlIcon: SkirtIcon, svIcon: CoatIcon },
+	{ nlWord: "stoer", svWord: "stor", nlIcon: ToughIcon, svIcon: BigIcon },
+	{ nlWord: "poes", svWord: "puss", nlIcon: CatIcon, svIcon: KissIcon },
+	{ nlWord: "vrede", svWord: "vrede", nlIcon: PeaceIcon, svIcon: AngerIcon },
 ];

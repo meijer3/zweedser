@@ -31,14 +31,14 @@ function buildDeck(): Card[] {
 			id: i * 2,
 			pairId: i,
 			lang: "nl",
-			word: pair.word,
+			word: pair.nlWord,
 			icon: pair.nlIcon,
 		});
 		cards.push({
 			id: i * 2 + 1,
 			pairId: i,
 			lang: "sv",
-			word: pair.word,
+			word: pair.svWord,
 			icon: pair.svIcon,
 		});
 	});
